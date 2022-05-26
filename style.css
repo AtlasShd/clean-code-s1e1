@@ -5,41 +5,51 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.details {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.details img {
   width: 100%;
 }
 
-.aaa .more_inf {
+.details .details__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .aaa {
+  .details {
     text-align: center;
   }
 }
 
-.centered-main-page-element {
+.todo-app {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
+.tasks__label,
+.tasks__input,
+.adding-task__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
 
-.task-row-wrapper {
+.adding-task__input-wrapper {
   display: flex;
+}
+
+.tasks__label,
+.tasks__input,
+.adding-task__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1
 }
 
 ul {
@@ -73,7 +83,7 @@ button:hover {
 
 /* Heading */
 h3,
-label[for="new-task"] {
+label[for="new-task-input"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -101,12 +111,12 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for="new-task"] {
+label[for="new-task-input"] {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+input#new-task-input {
   width: 318px;
 }
 
@@ -140,13 +150,13 @@ li>input[type="text"] {
   width: 226px
 }
 
-button.delete img {
+button.tasks__delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+button.tasks__delete img:hover {
   transform: rotateZ(0);
 }
 
