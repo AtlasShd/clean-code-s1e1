@@ -34,22 +34,14 @@ body {
 
 .tasks__label,
 .tasks__input,
-.adding-task__input {
+.add-task__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
 
-.adding-task__input-wrapper {
+.add-task__input-wrapper {
   display: flex;
-}
-
-.tasks__label,
-.tasks__input,
-.adding-task__input {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1
 }
 
 ul {
@@ -150,13 +142,13 @@ li>input[type="text"] {
   width: 226px
 }
 
-button.tasks__delete img {
+button.tasks__del img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.tasks__delete img:hover {
+button.tasks__del img:hover {
   transform: rotateZ(0);
 }
 
@@ -170,11 +162,11 @@ ul li input[type=text] {
   display: none
 }
 
-ul li.editMode input[type=text] {
+ul li.tasks__item_edit input[type=text] {
   display: inline-block;
   width: 224px
 }
 
-ul li.editMode label {
+ul li.tasks__item_edit label {
   display: none;
 }
