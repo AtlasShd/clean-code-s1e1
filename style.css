@@ -1,10 +1,10 @@
-/* Basic Style */
-body {
+#body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
 
+/* Details */
 .details {
   width: 500px;
   margin: 0 auto;
@@ -12,11 +12,11 @@ body {
   text-align: right;
 }
 
-.details img {
+.details__img {
   width: 100%;
 }
 
-.details .details__link {
+.details__link {
   font-family: fantasy, cursive;
 }
 
@@ -26,40 +26,14 @@ body {
   }
 }
 
-.todo-app {
-  display: block;
-  width: 500px;
-  margin: 0 auto 0;
-}
+/* Details */
 
-.tasks__label,
-.tasks__input,
-.add-task__input {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1
-}
-
+/* Add task */
 .add-task__input-wrapper {
   display: flex;
 }
 
-ul {
-  margin: 0;
-  padding: 0px;
-}
-
-li,
-h3 {
-  list-style: none;
-}
-
-input,
-button {
-  outline: none;
-}
-
-button {
+.add-task__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -67,15 +41,14 @@ button {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  outline: none;
 }
 
-button:hover {
+.add-task__btn:hover {
   color: #3a3a3a;
 }
 
-/* Heading */
-h3,
-label[for="new-task-input"] {
+.add-task__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -83,9 +56,11 @@ label[for="new-task-input"] {
   padding: 30px 0 10px;
   margin: 0;
   text-transform: uppercase;
+  display: block;
+  margin: 0 0 20px;
 }
 
-input[type="text"] {
+.add-task__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -96,77 +71,149 @@ input[type="text"] {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 318px;
+  width: 56%;
+  display: inline-block;
+  outline: none;
+  flex-grow: 1
 }
 
-input[type="text"]:focus {
+.add-task__input:focus {
   color: #333;
 }
 
-/* New Task */
-label[for="new-task-input"] {
+/* Add task */
+
+/* TОDО App */
+.todo-app {
   display: block;
-  margin: 0 0 20px;
+  width: 500px;
+  margin: 0 auto 0;
 }
 
-input#new-task-input {
-  width: 318px;
+.todo-app__title {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+  list-style: none;
 }
 
-/* Task list */
-li {
+/* TОDО App */
+
+/* Tasks */
+.tasks {
+  margin: 0;
+  padding: 0;
+}
+
+.tasks__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
 }
 
-li>* {
+.tasks__item>* {
   vertical-align: middle;
 }
 
-li>input[type="checkbox"] {
+.tasks__label,
+.tasks__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1
+}
+
+.tasks__checkbox,
+.tasks__input,
+.tasks__edit,
+.tasks__del {
+  outline: none;
+}
+
+.tasks__edit,
+.tasks__del {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.tasks__edit:hover,
+.tasks__del:hover {
+  color: #3a3a3a;
+}
+
+.tasks__input {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+  width: 226px
+}
+
+.tasks__input:focus {
+  color: #333;
+}
+
+.tasks__checkbox {
   margin: 0 10px;
 }
 
-li>label {
+.tasks__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li>input[type="text"] {
-  width: 226px
-}
-
-button.tasks__del img {
+.tasks__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.tasks__del img:hover {
+.tasks__img:hover {
   transform: rotateZ(0);
 }
 
+/* Tasks */
+
 /* Completed */
-ul#completed-tasks label {
+#compl-tasks .tasks__label {
   text-decoration: line-through color: #888;
 }
 
+/* Completed */
+
 /* Edit Task */
-ul li input[type=text] {
+.tasks__input {
   display: none
 }
 
-ul li.tasks__item_edit input[type=text] {
+.tasks__item_edit .tasks__input {
   display: inline-block;
   width: 224px
 }
 
-ul li.tasks__item_edit label {
+.tasks__item_edit .tasks__label {
   display: none;
 }
+
+/* Edit Task */
