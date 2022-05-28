@@ -75,7 +75,7 @@
   width: 56%;
   display: inline-block;
   outline: none;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .add-task__input:focus {
@@ -128,7 +128,7 @@
 .tasks__input {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .tasks__checkbox,
@@ -165,7 +165,7 @@
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-  width: 226px
+  width: 226px;
 }
 
 .tasks__input:focus {
@@ -197,19 +197,20 @@
 
 /* Completed */
 #compl-tasks .tasks__label {
-  text-decoration: line-through color: #888;
+  text-decoration: line-through;
+  color: #888;
 }
 
 /* Completed */
 
 /* Edit Task */
 .tasks__input {
-  display: none
+  display: none;
 }
 
 .tasks__item_edit .tasks__input {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .tasks__item_edit .tasks__label {
