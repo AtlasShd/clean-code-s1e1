@@ -17,17 +17,21 @@ function createNewTaskElement(taskString) {
   const deleteButton = document.createElement('button');
   const deleteButtonImg = document.createElement('img');
 
+  listItem.classList.add('tasks__item');
+
   label.innerText = taskString;
   label.className = 'tasks__label';
 
+  checkBox.classList.add('tasks__checkbox');
   checkBox.type = 'checkbox';
+  editInput.classList.add('tasks__input');
   editInput.type = 'text';
-  editInput.className = 'tasks__input';
 
   editButton.innerText = 'Edit';
   editButton.className = 'tasks__edit';
 
   deleteButton.className = 'tasks__del';
+  deleteButtonImg.classList.add('tasks__img');
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
 
