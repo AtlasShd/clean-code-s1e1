@@ -11,7 +11,7 @@
     <img class="header__img" src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix">
     <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
   </header>
-  <main class="todo-app">
+  <main class="todo-app" id="todo-app">
     <section class="todo-app__add-task add-task" id="add-task">
       <h1 class="add-task__title"><label for="new-task-input">Add Item</label></h1>
       <div class="add-task__input-wrapper">
@@ -19,7 +19,7 @@
         <button class="add-task__btn">Add</button>
       </div>
     </section>
-    <section class="todo-app__tasks todo-app__incompl-tasks tasks" id="incompl-tasks">
+    <section class="todo-app__tasks tasks tasks_incompl" id="incompl-tasks">
       <h2 class="tasks__title">Todo</h2>
       <ul class="tasks__list">
         <li class="tasks__item">
@@ -38,7 +38,7 @@
         </li>
       </ul>
     </section>
-    <section class="todo-app__tasks todo-app__compl-tasks tasks" id="compl-tasks">
+    <section class="todo-app__tasks tasks tasks_compl" id="compl-tasks">
       <h2 class="tasks__title">Completed</h2>
       <ul class="tasks__list">
         <li class="tasks__item">
